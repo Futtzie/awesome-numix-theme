@@ -1,18 +1,16 @@
 ---------------------------------
---    "Numix" awesome theme    --
---         By Futtzie          --
+--  "Solarized" awesome theme  --
+--     By Gwenhael Le Moine    --
 ---------------------------------
 
--- Use with gtk theme from
---  * https://github.com/numixproject/numix-gtk-theme
--- Icon set from numixproject is recommended
+-- Alternative icon sets and widget icons:
+--  * http://awesome.naquadah.org/wiki/Nice_Icons
 
 -- {{{ Main
 theme = {}
 theme.default_themes_path = "/usr/share/awesome/themes"
-theme.wallpaper = theme.default_themes_path.."/numix/dark/numa_flat_rags_wallpaper_kelvins_numix_by_microfreaks-d8dyf1v.png"
+theme.wallpaper = "/home/martin/.config/awesome/themes/numix/dark/numa_flat_rags_wallpaper_kelvins_numix_by_microfreaks-d8dyf1v.png"
 theme.colors = {}
-
 theme.colors.nfocus	 = "#eeeeeeff"
 theme.colors.nall_bg = "#444444ff"
 theme.colors.nfg	 = "#ddddddff"
@@ -27,30 +25,32 @@ theme.colors.ntext	 = "#333333ff"
 theme.font      = "Open Sans 12"
 
 -- {{{ Colors
-theme.fg_normal  = "#eeeeee"		--text non focus
-theme.fg_focus   = "#eeeeee"		--text focus
-theme.fg_urgent  = "#eeeeee"
+theme.fg_normal  = theme.colors.nfocus
+--text non focus
+theme.fg_focus   = theme.colors.nfocus
+--text focus
+theme.fg_urgent  = theme.colors.base3
 
-theme.bg_normal  = "#444444"
-theme.bg_focus   = "#555555"
-theme.bg_urgent  = "#f0544c"
-theme.bg_systray = "#f0544c"
+theme.bg_normal  = theme.colors.nall_bg
+theme.bg_focus   = theme.colors.nnfg
+theme.bg_urgent  = theme.colors.norange
+theme.bg_systray = theme.colors.norange
 -- }}}
 
 -- {{{ Borders
 theme.border_width  = "2"
-theme.border_normal = "#444444"
-theme.border_focus  = "#f0544cff"
-theme.border_marked = "#f0544c"
+theme.border_normal = theme.bg_normal
+theme.border_focus  = theme.colors.norange
+theme.border_marked = theme.bg_urgent
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#555555"
-theme.titlebar_bg_normal = "#444444"
+theme.titlebar_bg_focus  = theme.bg_focus
+theme.titlebar_bg_normal = theme.bg_normal
 -- }}}
 
 -- {{{ Mouse finder
-theme.mouse_finder_color = "#f06860ff"
+theme.mouse_finder_color = theme.colors.nlink
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
 -- }}}
 
@@ -90,33 +90,29 @@ theme.layout_floating   = theme.default_themes_path.."/numix/dark/layouts/floati
 -- }}}
 
 -- {{{ Titlebar
-theme.titlebar_close_button_focus  = theme.default_themes_path.."/numix/dark/titlebar/close_focus.png"
-theme.titlebar_close_button_normal = theme.default_themes_path.."/numix/dark/titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = theme.default_themes_path.."/numix/dark/titlebar/close.svg"
+theme.titlebar_close_button_normal = theme.default_themes_path.."/numix/dark/titlebar/close_unfocused.svg"
 
-theme.titlebar_ontop_button_focus_active  = theme.default_themes_path.."/numix/dark/titlebar/ontop_focus_active.png"
-theme.titlebar_ontop_button_normal_active = theme.default_themes_path.."/numix/dark/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/ontop_normal_inactive.png"
+-- since there is no floating icon in the numix theme the radio button was chosen
+theme.titlebar_floating_button_focus_active  = theme.default_themes_path.."/numix/dark/titlebar/menuitem-radio-checked@2.png"
+theme.titlebar_floating_button_normal_active = theme.default_themes_path.."/numix/dark/titlebar/menuitem-radio-checked@2.png"
+theme.titlebar_floating_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/menuitem-radio-checked-hover@2.png"
+theme.titlebar_floating_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/menuitem-radio-checked-hover@2.png"
 
-theme.titlebar_sticky_button_focus_active  = theme.default_themes_path.."/numix/dark/titlebar/sticky_focus_active.png"
-theme.titlebar_sticky_button_normal_active = theme.default_themes_path.."/numix/dark/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/sticky_normal_inactive.png"
+theme.titlebar_maximized_button_focus_active  = theme.default_themes_path.."/numix/dark/titlebar/unmaximize_focused_pressed.svg"
+theme.titlebar_maximized_button_normal_active = theme.default_themes_path.."/numix/dark/titlebar/unmaximize_unfocused_pressed.svg"
+theme.titlebar_maximized_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/maximize.svg"
+theme.titlebar_maximized_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/maximize_dash_disabled.svg"
 
-theme.titlebar_floating_button_focus_active  = theme.default_themes_path.."/numix/dark/titlebar/floating_focus_active.png"
-theme.titlebar_floating_button_normal_active = theme.default_themes_path.."/numix/dark/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/floating_normal_inactive.png"
-
-theme.titlebar_maximized_button_focus_active  = theme.default_themes_path.."/numix/dark/titlebar/maximized_focus_active.png"
-theme.titlebar_maximized_button_normal_active = theme.default_themes_path.."/numix/dark/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/maximized_normal_inactive.png"
+theme.titlebar_minimize_button_focus_inactive  = theme.default_themes_path.."/numix/dark/titlebar/minimize.svg"
+theme.titlebar_minimize_button_normal_inactive = theme.default_themes_path.."/numix/dark/titlebar/minimize_unfocused.svg"
 -- }}}
 -- }}}
 
 -- {{{ Tasklist
 theme.tasklist_disable_icon = true
 -- }}}
+
+theme.icon_theme = Numix
 
 return theme
