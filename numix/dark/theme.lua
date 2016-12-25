@@ -9,7 +9,7 @@
 -- {{{ Main
 theme = {}
 theme.default_themes_path = "/usr/share/awesome/themes"
-theme.wallpaper = "/home/martin/.config/awesome/themes/numix/dark/numa_flat_rags_wallpaper_kelvins_numix_by_microfreaks-d8dyf1v.png"
+theme.wallpaper = theme.default_themes_path .. "/numix/dark/numa_flat_rags_wallpaper_kelvins_numix_by_microfreaks-d8dyf1v.png"
 theme.colors = {}
 theme.colors.nfocus	 = "#eeeeeeff"
 theme.colors.nall_bg = "#444444ff"
