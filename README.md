@@ -2,6 +2,8 @@
 
 Simple [awesome-wm](https://github.com/awesomeWM/awesome) color theme that is based on the [numix-gtk-theme](https://github.com/numixproject/numix-gtk-theme) from the Numixproject. It is supposed to make awesome-wm blend in perfectly with the numix-gtk-theme.
 
+Working on awesome-wm 3.5 and 4.0.
+
 
 ## install
 
